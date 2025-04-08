@@ -1,5 +1,6 @@
 # MEPTools
 Une extension chromium pour rajouter quelques fonctionnalités sur MEP et corriger quelques bugs.
+Ceci est un petit projet annexe codé principalement en javascript qui nécessiterait beaucoup plus de temps et de développement !
 
 ## Installation
 
