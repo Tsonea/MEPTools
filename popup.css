@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* Reset */
+
+body{
+    border-radius: 10px;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 550px;
+  }
+
+.container {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.tabs {
+display: flex;
+border-bottom: 2px solid #842459;
+margin-bottom: 20px;
+
+}
+
+.tablinks {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    background-color: #fefefe;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #842459;
+    font-weight: bold;
+    transition: background 0.3s;
+    margin: 10px;
+}
+
+.tablinks.active {
+    background-color: #842459;
+    color: #fefefe;
+}
+
+.tabcontent {
+display: none;
+}
+
+.tabcontent.active {
+display: block;
+}
+
+h3 {
+margin-top: 0;
+color: #842459;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.button-primary {
+    background-color: #842459;
+    color: #ffffff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1;
+    text-align: center;
+}
+
+.button-secondary {
+    background-color: #ffffff;
+    color: #6200ea;
+    border: 2px solid #842459;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1;
+    text-align: center;
+}
+
+.button-danger {
+    background-color: #d32f2f;
+    color: #ffffff;
+    max-width: 40%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1;
+    text-align: center;
+}
+
+.stats {
+margin-top: 15px;
+font-size: 14px;
+color: #555;
+text-align: center;
+}

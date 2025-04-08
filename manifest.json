@@ -1,0 +1,66 @@
+{
+    "name": "MEPTools",
+    "description": "Un addon très utile pour MEP !",
+    "version": "1",
+    "manifest_version": 3,
+    "permissions": ["storage", "scripting", "tabs"],
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://dijon.monespaceprepa.fr/accueil.php"],
+            "js": ["fix_notifs.js"],
+            "run_at": "document_idle"
+        },
+        {
+            "matches": ["https://dijon.monespaceprepa.fr/matiere.php*"],
+            "js": ["assets/js/MEPToolsTools.js", "export_course_to_medtools.js", "download_all_courses.js", "organizer.js", "add_link_to_eye.js"],
+            "run_at": "document_idle"
+        },
+        {
+            "matches": ["https://dijon.monespaceprepa.fr/evaluations/elearning_generate*"],
+            "js": ["assets/js/MEPToolsTools.js", "autoset.js", "doitagain.js", "stats_extractor.js"],
+            "run_at": "document_idle"
+        },
+        {
+            "matches": ["https://dijon.monespaceprepa.fr/evaluations/elearning_resultats/*"],
+            "js": ["assets/js/MEPToolsTools.js", "doitagain.js", "fix_view_elearning.js"],
+            "run_at": "document_idle"
+        },
+        {
+            "matches": ["https://dijon.monespaceprepa.fr/"],
+            "js": ["global_content.js"],
+            "run_at": "document_idle"
+        },
+        {
+            "matches": ["https://dijon.monespaceprepa.fr/evaluations/elearning/creation*","https://dijon.monespaceprepa.fr/evaluations/evaluations/*", "https://dijon.monespaceprepa.fr/evaluations/elearning/id/*"],
+            "js": ["zoom.js", "check_responses.js"],
+            "run_at": "document_idle"
+        },
+        {
+            "matches": ["https://dijon.monespaceprepa.fr/plannings.php","https://dijon.monespaceprepa.fr/mes_videos_matieres.php", "https://dijon.monespaceprepa.fr/mes_matieres.php*"],
+            "js": ["assets/js/MEPToolsTools.js", "organizer.js"],
+            "run_at": "document_idle"
+        },
+        {
+            "matches": ["https://dijon.monespaceprepa.fr/document_cours.php*"],
+            "js": ["insert_stats.js", "add_link_to_eye.js"],
+            "run_at": "document_idle"
+        },
+        {
+            "matches": ["https://dijon.monespaceprepa.fr/evaluations/ancrage/session/*"],
+            "js": ["fix_overlay_ancrage.js"],
+            "run_at": "document_idle"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["popup.js"],
+            "matches": ["<all_urls>"]
+        }
+    ]
+}
